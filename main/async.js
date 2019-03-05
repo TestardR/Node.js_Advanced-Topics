@@ -2,6 +2,8 @@ const https = require('https');
 
 const start = Date.now();
 
+// async features will use OS multi-threaded features
+
 function doRequest() {
   https
     .request('https://www.google.com', res => {
