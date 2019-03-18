@@ -20,5 +20,9 @@ afterEach(async () => {
 });
 
 test('clicking login start oauth flow', async () => {
-  page.click();
+  await page.click('.right a');
+
+  const url = await page.url();
+
+  expect(url).toMatch(/accounts\.google\.com/);
 });
